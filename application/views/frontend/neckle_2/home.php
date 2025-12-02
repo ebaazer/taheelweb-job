@@ -7,6 +7,10 @@
         font-weight: 600;
         font-size: 12px;
     }
+    
+    .cooo{
+        background: #017c7824 !important;
+    }
 </style>
 
 <div class="inner-page-banner" style="padding: 25px 0;">
@@ -40,11 +44,11 @@
     <div class="container">
 
         <div class="col-lg-7">
-            <div class="inquiry-form">
+            <div class="inquiry-form cooo">
 
                 <form class="new_contact_demo" id="job_apply_for" accept-charset="UTF-8">
-                    <div class="product-sidebar" style="padding: 0px; background: none;">
-                        <div class="product-widget mb-20">
+                    <div class="product-sidebar" style="padding: 0px; border: none;">
+                        <div class="product-widget mb-20 cooo">
                             <div class="check-box-item">
                                 <div class="checkbox-container">
                                     <div class="row" >
@@ -189,7 +193,7 @@
                                         <div class="col-md-6">
                                             <div class="form-inner mb-30">
                                                 <label>تحميل السيرة الذاتية</label>
-                                                <div class="dropzone dropzone-default" id="kt_dropzone_1">
+                                                <div class="dropzone dropzone-default" id="kt_dropzone_1" style=" border-radius: 10px;">
                                                     <div class="dropzone-msg dz-message needsclick">
                                                         <h6 class="dropzone-msg-title">
                                                             قم بإسقاط الملفات هنا أو انقر للتحميل
@@ -204,7 +208,7 @@
                                         <div class="col-md-6">
                                             <div class="form-inner mb-30">
                                                 <label>تحميل الصورة الشخصية </label>
-                                                <div class="dropzone dropzone-default" id="kt_dropzone_2">
+                                                <div class="dropzone dropzone-default" id="kt_dropzone_2" style=" border-radius: 10px;">
                                                     <div class="dropzone-msg dz-message needsclick">
                                                         <h6 class="dropzone-msg-title">
                                                             قم بإسقاط الملفات هنا أو انقر للتحميل
@@ -215,7 +219,7 @@
                                             </div>
                                         </div> 
 
-                                        <div style="border:1px solid #ccc; padding:15px; margin:15px 0; background:#f9f9f9; font-size:14px; line-height:1.5;">
+                                        <div style="border:1px solid #ccc; padding:15px; margin:15px 0; background:#f9f9f9; font-size:14px; line-height:1.5; border-radius: 10px;">
                                             <p style="font-weight:bold; font-size:15px; margin-bottom:10px;">بإرسال هذا النموذج، أقرّ بأنني أوافق على ما يلي:</p>
                                             <ol>
                                                 <li>أسمح لمنصة  تاهيل ويب  أو من تفوضه  بعرض سيرتي الذاتية ومشاركتها مع المؤسسات والجهات المهتمة  ضمن خدمات المنصة.</li>
@@ -298,12 +302,9 @@
                 contact_years_experience: $("#contact_years_experience").val(),
                 contact_nationality: $("#contact_nationality").val(),
                 contact_current_country: $("#contact_current_country").val(),
-                contact_training_package: $("#contact_training_package").val(),
                 contact_cv_link: $("#job_application_cv").val(),
                 contact_photo_link: $("#job_application_photo").val(),
             };
-
-            //console.log(formData);
 
             $.ajax({
                 type: "POST",
@@ -314,7 +315,6 @@
 
                 obj = JSON.parse(data);
 
-                //console.log(obj);
                 if (!obj.success) {
 
                     if (obj.errors.contact_name) {

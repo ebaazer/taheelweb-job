@@ -97,7 +97,6 @@ class Home extends CI_Controller {
             $data_contact['years_experience'] = $this->test_input($_POST["contact_years_experience"]);
             $data_contact['nationality'] = $this->test_input($_POST["contact_nationality"]);
             $data_contact['current_country'] = $this->test_input($_POST["contact_current_country"]);
-            $data_contact['years_experience'] = $this->test_input($_POST["contact_training_package"]);
             $data_contact['cv_link'] = $this->test_input($_POST["contact_cv_link"]);
             $data_contact['photo_link'] = $this->test_input($_POST["contact_photo_link"]);
             $data_contact['date'] = date("Y-m-d H:i:s");
