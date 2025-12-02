@@ -74,7 +74,11 @@ class Home extends CI_Controller {
         if (empty($_POST['contact_current_country'])) {
             $errors['contact_current_country'] = $this->lang->line('is_required');
         }
-
+        
+        if (empty($_POST['contact_current_city'])) {
+            $errors['contact_current_city'] = $this->lang->line('is_required');
+        }        
+        
         if (empty($_POST['contact_cv_link'])) {
             $errors['job_application_cv'] = $this->lang->line('is_required');
         }
@@ -97,6 +101,10 @@ class Home extends CI_Controller {
             $data_contact['years_experience'] = $this->test_input($_POST["contact_years_experience"]);
             $data_contact['nationality'] = $this->test_input($_POST["contact_nationality"]);
             $data_contact['current_country'] = $this->test_input($_POST["contact_current_country"]);
+            
+            $data_contact['current_city'] = $this->test_input($_POST["contact_current_city"]);
+            $data_contact['readiness'] = $this->test_input($_POST["contact_readiness"]);
+            
             $data_contact['cv_link'] = $this->test_input($_POST["contact_cv_link"]);
             $data_contact['photo_link'] = $this->test_input($_POST["contact_photo_link"]);
             $data_contact['date'] = date("Y-m-d H:i:s");

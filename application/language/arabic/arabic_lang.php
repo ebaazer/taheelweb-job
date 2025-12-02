@@ -28,5 +28,9 @@ $lang['our_newsletter'] = 'نشرة أخبارنا';
 $lang['follow'] = 'تابعنا';
 $lang['is_required'] = 'حقل الزامي';
 $lang['thank_you'] = 'شكرا لك';
-
-
+$lang['current_city'] = 'المدينة الحالية';
+$lang['readiness'] = 'جاهزية العمل/تاريخ البدء المتوقع';
+$lang['readiness_option_immediate'] = 'حالياً / فوراً';
+$lang['readiness_option_two_weeks'] = 'خلال أسبوعين من تاريخ الاتفاق';
+$lang['readiness_option_one_month'] = 'خلال شهر من تاريخ الاتفاق';
+$lang['readiness_option_two_months'] = 'بعد شهرين من تاريخ الاتفاق ';

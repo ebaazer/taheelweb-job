@@ -188,7 +188,27 @@
                                                 <input type="text" placeholder="" id="contact_current_country">
                                                 <span id="e_c_current_country" class="errors_data"></span>
                                             </div>
-                                        </div>         
+                                        </div>    
+                                                                                
+                                        <div class="col-md-6">
+                                            <div class="form-inner mb-30">
+                                                <label><?php echo $this->lang->line("current_city"); ?>*</label>
+                                                <input type="text" placeholder="" id="contact_current_city">
+                                                <span id="e_c_current_city" class="errors_data"></span>
+                                            </div>
+                                        </div>                                          
+                                        
+                                        <div class="col-md-6 mb-20">
+                                            <div class="form-inner">
+                                                <label><?php echo $this->lang->line("readiness"); ?>*</label>
+                                                <select style="background: #fff !important;" id="contact_readiness">
+                                                    <option value="readiness_option_immediate"><?php echo $this->lang->line("readiness_option_immediate"); ?></option>
+                                                    <option value="readiness_option_two_weeks"><?php echo $this->lang->line("readiness_option_two_weeks"); ?></option>
+                                                    <option value="readiness_option_one_month"><?php echo $this->lang->line("readiness_option_one_month"); ?></option>
+                                                    <option value="readiness_option_two_months"><?php echo $this->lang->line("readiness_option_two_months"); ?></option>
+                                                </select>
+                                            </div>
+                                        </div>                                          
 
                                         <div class="col-md-6">
                                             <div class="form-inner mb-30">
@@ -302,6 +322,10 @@
                 contact_years_experience: $("#contact_years_experience").val(),
                 contact_nationality: $("#contact_nationality").val(),
                 contact_current_country: $("#contact_current_country").val(),
+                
+                contact_current_city: $("#contact_current_city").val(),
+                contact_readiness: $("#contact_readiness").val(),
+                
                 contact_cv_link: $("#job_application_cv").val(),
                 contact_photo_link: $("#job_application_photo").val(),
             };
@@ -352,6 +376,12 @@
                     } else {
                         document.getElementById("e_c_current_country").innerHTML = "";
                     }
+                                        
+                    if (obj.errors.contact_current_city) {
+                        document.getElementById("e_c_current_city").innerHTML = obj.errors.contact_current_city;
+                    } else {
+                        document.getElementById("e_c_current_city").innerHTML = "";
+                    }                    
 
                     if (obj.errors.job_application_cv) {
                         document.getElementById("e_c_job_application_cv").innerHTML = obj.errors.job_application_cv;
